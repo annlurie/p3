@@ -11,28 +11,27 @@
 |
 */
 
+//Route::get('/', function()
+//{
+//	return View::make('hello');
+//});
+
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('home');
 });
 
-Route::get('/home', function()
+Route::get('/lipsum/{query?}', function()
 {
-	return View::make('home');
+	return View::make('loremipsum');
+});
+
+Route::get('/users/{query?}', function()
+{
+	return View::make('users');
 });
 
 Route::get('/pack', function()
 {
 	echo 'packages!';
 });
-
-Route::get('/lipsum', function()
-{
-	return View::make('loremipsum');
-});
-
-Route::get('/users', function()
-{
-	return View::make('users');
-});
-
