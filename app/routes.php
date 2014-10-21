@@ -15,3 +15,24 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::get('/home', function()
+{
+	return View::make('home');
+});
+
+Route::get('/pack', function()
+{
+	echo 'packages!';
+});
+
+Route::get('/lipsum', function()
+{
+	return View::make('loremipsum');
+});
+
+Route::get('/users', function()
+{
+	return View::make('users');
+});
+
