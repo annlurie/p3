@@ -21,12 +21,12 @@
         <div class="col-md-4">
           <h2>Fake Some Users</h2>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="/users" role="button">Gimme Some &raquo;</a></p>
+          <p><a class="btn btn-default" href="/users" role="button">Let's Get Fakin'! &raquo;</a></p>
         </div>
         <div class="col-md-4">
           <h2>Fake Some Text</h2>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="/lipsum" role="button">Gimme Some &raquo;</a></p>
+          <p><a class="btn btn-default" href="/lipsum" role="button">Let's Get Fakin'! &raquo;</a></p>
        </div>
 
  <!--

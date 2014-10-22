@@ -2,6 +2,8 @@
 
 @section ('content')
 
+<!--PHP Logic Section-->
+
     <div class="jumbotron">
       <div class="container">
         <h1>Fake Text Maker</h1>
@@ -32,6 +34,11 @@
 </div>
 
 </div> <!--close container-->
+
+<!--Place for output-->
+<div class="container">
+	<h1>{{$number}}</h1>
+</div>
 
 </fieldset>
 </form>

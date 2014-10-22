@@ -23,12 +23,20 @@ Route::get('/', function()
 
 Route::get('/lipsum/{query?}', function()
 {
-	return View::make('loremipsum');
+	$number = Input::get('number');
+	return View::make('loremipsum')->with('number', $number);
 });
 
 Route::get('/users/{query?}', function()
 {
 	return View::make('users');
+});
+
+Route::get('/pass', function()
+{
+    $data = Input::all();
+    return View::make('pass')->with($data);
+
 });
 
 Route::get('/pack', function()
@@ -48,7 +56,7 @@ Route::get('/pack', function()
     echo 'LoremIpsum';
     $generator = new LoremIpsum();
     $paragraphs = $generator->getParagraphs(3);
-    echo implode('<p>', $paragraphs);
+   	echo Pre::render($paragraphs);
 
 
 });

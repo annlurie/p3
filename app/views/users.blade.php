@@ -14,7 +14,7 @@ Fake People Maker
     </div>
 
 <div class="container">
-<form class="form-horizontal">
+<form class="form-horizontal" action = "/users">
 <fieldset>
 
 <!-- Text input-->
@@ -30,20 +30,20 @@ Fake People Maker
 <div class="control-group">
   <label class="control-label" for="attributes">Give Those Fakers Fake Qualities</label>
   <div class="controls">
-    <label class="checkbox" for="attributes-0">
-      <input name="attributes" id="attributes-0" value="Email Address" type="checkbox">
+    <label class="checkbox" for="email">
+      <input name="email" id="email" value="Email Address" type="checkbox">
       Email Address
     </label>
-    <label class="checkbox" for="attributes-1">
-      <input name="attributes" id="attributes-1" value="Phone Number" type="checkbox">
+    <label class="checkbox" for="phone">
+      <input name="phone" id="phone" value="Phone Number" type="checkbox">
       Phone Number
     </label>
-    <label class="checkbox" for="attributes-2">
-      <input name="attributes" id="attributes-2" value="Date of Birth" type="checkbox">
+    <label class="checkbox" for="dob">
+      <input name="dob" id="dob" value="Date of Birth" type="checkbox">
       Date of Birth
     </label>
-    <label class="checkbox" for="attributes-3">
-      <input name="attributes" id="attributes-3" value="Lorem Ipsum Bio(m)" type="checkbox">
+    <label class="checkbox" for="bio">
+      <input name="bio" id="bio" value="Lorem Ipsum Bio(m)" type="checkbox">
       Lorem Ipsum Bio(m)
     </label>
     <!-- If I get ambitious, I will use long/lat attributes of Faker PLUS ANOTHER PACKAGE TBD
