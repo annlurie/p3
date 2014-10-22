@@ -33,5 +33,17 @@ Route::get('/users/{query?}', function()
 
 Route::get('/pack', function()
 {
-	echo 'packages!';
+	echo 'Pre!';
+	$fruit = Array('Apples', 'Oranges', 'Pears');
+    echo Pre::render($fruit,'Fruit');
+
+    echo 'Faker';
+    $faker = Faker::create();
+    echo $faker->name;
+    echo $faker->phoneNumber;
+    echo $faker->email;
+    echo $faker->sentence($nbWords = 6);
+    echo $faker->date($format = 'Y-m-d', $max = '-13 years', $min = '-100 years');
+
+
 });

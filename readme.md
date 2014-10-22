@@ -1,3 +1,7 @@
+## External Resources
+Bootstrap for styling and layout: http://getbootstrap.com/
+Form Builder for Bootstrap: http://bootsnipp.com/forms
+
 ## Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
