@@ -68,9 +68,18 @@ Fake People Maker
 </form>
 </div>
 
-<!--Place for output-->
-<div class="container">
-	<h1>{{Pre::render($data)}}</h1>
-</div>
+<?php
+	if (isset($data))
+	{
+		echo Pre::render($data);
 
+		    echo 'Faker';
+	    $faker = Faker::create();
+	    echo $faker->name;
+	    echo $faker->phoneNumber;
+	    echo $faker->email;
+	    echo $faker->sentence($nbWords = 6);
+	    echo $faker->date($format = 'Y-m-d', $max = '-13 years', $min = '-100 years');
+	}
+?>
 @stop

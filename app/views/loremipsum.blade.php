@@ -37,7 +37,16 @@
 
 <!--Place for output-->
 <div class="container">
-	<h1>{{$number}}</h1>
+<?php
+	if (isset($data))
+	{
+		echo Pre::render($data);
+		echo 'LoremIpsum';
+	    $generator = new LoremIpsum();
+	    $paragraphs = $generator->getParagraphs($data);
+	   	echo Pre::render($paragraphs);
+	}
+?>
 </div>
 
 </fieldset>

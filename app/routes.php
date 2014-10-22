@@ -23,8 +23,8 @@ Route::get('/', function()
 
 Route::get('/lipsum/{query?}', function()
 {
-	$number = Input::get('number');
-	return View::make('loremipsum')->with('number', $number);
+	$data = Input::get('number');
+	return View::make('loremipsum')->with('data', $data);
 });
 
 Route::get('/users/{query?}', function()
