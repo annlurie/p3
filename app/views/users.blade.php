@@ -73,13 +73,32 @@ Fake People Maker
 	{
 		echo Pre::render($data);
 
-		    echo 'Faker';
 	    $faker = Faker::create();
-	    echo $faker->name;
-	    echo $faker->phoneNumber;
-	    echo $faker->email;
-	    echo $faker->sentence($nbWords = 6);
-	    echo $faker->date($format = 'Y-m-d', $max = '-13 years', $min = '-100 years');
+	    for ($i = 1; $i <= 4; $i++)
+	    {
+	    	echo $faker->name;
+
+		    if (array_key_exists('email', $data))
+		    {
+		    	echo $faker->email;
+		    }	
+
+		    if (array_key_exists('phone', $data))
+		    {
+		    	echo $faker->phoneNumber;
+		    }
+
+		    if (array_key_exists('dob', $data))
+		    {
+		    	echo $faker->date($format = 'Y-m-d', $max = '-13 years', $min = '-100 years');
+		    }	
+	    
+		    if (array_key_exists('bio', $data))
+		    {
+		    	echo $faker->sentence($nbWords = 6);
+		    } 
+	    }
+   	    
 	}
 ?>
 @stop
