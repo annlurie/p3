@@ -29,7 +29,8 @@ Route::get('/lipsum/{query?}', function()
 
 Route::get('/users/{query?}', function()
 {
-	return View::make('users');
+	$data = Input::get();
+	return View::make('users')->with('data', $data);
 });
 
 Route::get('/pass', function()

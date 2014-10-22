@@ -68,5 +68,9 @@ Fake People Maker
 </form>
 </div>
 
+<!--Place for output-->
+<div class="container">
+	<h1>{{Pre::render($data)}}</h1>
+</div>
 
 @stop
