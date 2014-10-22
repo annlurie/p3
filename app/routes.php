@@ -45,5 +45,10 @@ Route::get('/pack', function()
     echo $faker->sentence($nbWords = 6);
     echo $faker->date($format = 'Y-m-d', $max = '-13 years', $min = '-100 years');
 
+    echo 'LoremIpsum';
+    $generator = new LoremIpsum();
+    $paragraphs = $generator->getParagraphs(3);
+    echo implode('<p>', $paragraphs);
+
 
 });

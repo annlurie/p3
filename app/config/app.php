@@ -190,6 +190,7 @@ return array(
 		'View'            => 'Illuminate\Support\Facades\View',
 		'Faker' 		  => 'Faker\Factory',
 		'Pre'             => 'Paste\Pre',
+		'LoremIpsum'      => 'Badcow\LoremIpsum\Generator',
 
 	),
 
