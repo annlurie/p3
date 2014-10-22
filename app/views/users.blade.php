@@ -6,12 +6,16 @@ Fake People Maker
 
 @section('content')
 
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Fake People Maker</h1>
+        <p>Here's the text that describes how to fake a person.</p>
+      </div>
+    </div>
+
 <div class="container">
 <form class="form-horizontal">
 <fieldset>
-
-<!-- Form Name -->
-<legend>Fake People Maker</legend>
 
 <!-- Text input-->
 <div class="control-group">
@@ -42,6 +46,13 @@ Fake People Maker
       <input name="attributes" id="attributes-3" value="Lorem Ipsum Bio(m)" type="checkbox">
       Lorem Ipsum Bio(m)
     </label>
+    <!-- If I get ambitious, I will use long/lat attributes of Faker PLUS ANOTHER PACKAGE TBD
+    	to get some place names for my fake people.
+        <label class="checkbox" for="attributes-4">
+      <input name="attributes" id="attributes-4" value="Location" type="checkbox">
+      Location
+    </label>
+    -->
   </div>
 </div>
 
