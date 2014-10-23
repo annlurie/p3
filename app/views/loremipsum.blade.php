@@ -77,5 +77,6 @@ Fake Text Maker
 
   <hr>
 </div>
+</div>
 
 @stop
