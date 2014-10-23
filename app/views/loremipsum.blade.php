@@ -43,20 +43,24 @@
 		//echo Pre::render($data);
 		if ((int)$data < 0)
 		{
-			$count = 0;
+			$count = 1;
 		}
 		if ((int)$data > 99)
 		{
 			$count = 99;
 		}
-		else $count = 1;
 
-		echo 'Here is your text';
-	    $generator = new LoremIpsum();
+		else $count = $data;
+		$generator = new LoremIpsum();
 	    $paragraphs = $generator->getParagraphs($count);
-	   	echo implode('<p>', $paragraphs);
 	}
 ?>
+
+		@if (isset($data))
+			<h2>Here is your text:</h2>
+		   	{{implode('<p>', $paragraphs);}} 
+	   	@endif
+
 </div>
 
 </fieldset>
