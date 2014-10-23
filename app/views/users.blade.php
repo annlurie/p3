@@ -13,71 +13,67 @@ Fake People Maker
       </div>
     </div>
 
-<div class="container">
-<form class="form-horizontal" action = "/users">
-<fieldset>
+    <div class="container">
+    <div class="row">
+    <div class="col-md-4">
 
-<!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="number">How Many Fake People?</label>
-  <div class="controls">
-    <input id="number" name="number" placeholder="1-99" class="input-xlarge" required="" type="text">
-    
-  </div>
-</div>
+		<form class="form-horizontal" action = "/users">
+		<fieldset>
+		<!-- Text input-->
+		<div class="control-group">
+		  <label class="control-label" for="number">How Many Fake People?</label>
+		  <div class="controls">
+		    <input id="number" name="number" placeholder="1-99" class="input-xlarge" required="" type="text">
+		  </div>
+		</div>
 
-<!-- Multiple Checkboxes -->
-<div class="control-group">
-  <label class="control-label" for="attributes">Give Those Fakers Fake Qualities</label>
-  <div class="controls">
-    <label class="checkbox" for="email">
-      <input name="email" id="email" value="Email Address" type="checkbox">
-      Email Address
-    </label>
-    <label class="checkbox" for="phone">
-      <input name="phone" id="phone" value="Phone Number" type="checkbox">
-      Phone Number
-    </label>
-    <label class="checkbox" for="dob">
-      <input name="dob" id="dob" value="Date of Birth" type="checkbox">
-      Date of Birth
-    </label>
-    <label class="checkbox" for="bio">
-      <input name="bio" id="bio" value="Lorem Ipsum Bio(m)" type="checkbox">
-      Lorem Ipsum Bio(m)
-    </label>
-    <!-- If I get ambitious, I will use long/lat attributes of Faker PLUS ANOTHER PACKAGE TBD
-    	to get some place names for my fake people.
-        <label class="checkbox" for="attributes-4">
-      <input name="attributes" id="attributes-4" value="Location" type="checkbox">
-      Location
-    </label>
-    -->
-  </div>
-</div>
+		<!-- Multiple Checkboxes -->
+		<div class="control-group">
+		  <label class="control-label" for="attributes">Give Those Fakers Fake Qualities</label>
+		  <div class="controls">
+		    <label class="checkbox" for="email">
+		      <input name="email" id="email" value="Email Address" type="checkbox">
+		      Email Address
+		    </label>
+		    <label class="checkbox" for="phone">
+		      <input name="phone" id="phone" value="Phone Number" type="checkbox">
+		      Phone Number
+		    </label>
+		    <label class="checkbox" for="dob">
+		      <input name="dob" id="dob" value="Date of Birth" type="checkbox">
+		      Date of Birth
+		    </label>
+		    <label class="checkbox" for="bio">
+		      <input name="bio" id="bio" value="Lorem Ipsum Bio(m)" type="checkbox">
+		      Lorem Ipsum Bio(m)
+		    </label>
+  			</div>
+			</div>
 
-<!-- Button -->
-<div class="control-group">
-  <label class="control-label" for="submit"></label>
-  <div class="controls">
-    <button id="submit" name="submit" class="btn btn-primary">Fake 'Em Up!</button>
-  </div>
-</div>
+			<!-- Button -->
+			<div class="control-group">
+			  <label class="control-label" for="submit"></label>
+			  <div class="controls">
+			    <button id="submit" name="submit" class="btn btn-primary">Fake 'Em Up!</button>
+			  </div>
+			</div>
 
 </fieldset>
-</form>
+</form>        
 </div>
 
+
+        <div class="col-md-8">
 <?php
 	if (array_key_exists('submit', $data))
 	{
-		echo Pre::render($data);
+		//echo Pre::render($data);
 
 	    $faker = Faker::create();
 
 	    $count_input = (int)$data['number'];
 
-	    echo $data['number'];
+	    //echo $data['number'];
 
 	    if ((int)$data['number'] < 0)
 		{
@@ -88,7 +84,7 @@ Fake People Maker
 			$count = 99;
 		}
 		else $count = (int)$data['number'];
-		echo 'Count is'.$count;
+		//echo 'Count is'.$count;
 	 }
 ?>
 
@@ -114,5 +110,9 @@ Fake People Maker
 			@endfor
 
 	   	@endif
+       </div>
+
+      <hr>
+    </div> <!-- /container -->
 
 @stop

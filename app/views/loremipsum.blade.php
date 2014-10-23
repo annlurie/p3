@@ -44,11 +44,16 @@ Fake Text Maker
     </div>
     <!--End left column-->
 
+    <!--Right column, for output. Does not display if form has not been submitted.-->
     <div class="col-md-8">
+    	<!--Logic for the page...which I know is a terrible place to put it...-->
 		<?php
+			//Has form been submitted?
 			if (isset($data))
 			{
 				//echo Pre::render($data);
+
+				//Upper and lower bounds for 
 				if ((int)$data < 0)
 				{
 					$count = 1;
@@ -57,7 +62,8 @@ Fake Text Maker
 				{
 					$count = 99;
 				}
-				else $count = $data;
+				else $count = (int)$data;
+
 				$generator = new LoremIpsum();
 			    $paragraphs = $generator->getParagraphs($count);
 			}
