@@ -40,11 +40,21 @@
 <?php
 	if (isset($data))
 	{
-		echo Pre::render($data);
-		echo 'LoremIpsum';
+		//echo Pre::render($data);
+		if ((int)$data < 0)
+		{
+			$count = 0;
+		}
+		if ((int)$data > 99)
+		{
+			$count = 99;
+		}
+		else $count = 1;
+		
+		echo 'Here is your text';
 	    $generator = new LoremIpsum();
-	    $paragraphs = $generator->getParagraphs($data);
-	   	echo Pre::render($paragraphs);
+	    $paragraphs = $generator->getParagraphs($count);
+	   	echo implode('<p>', $paragraphs);
 	}
 ?>
 </div>

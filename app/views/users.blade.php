@@ -69,7 +69,7 @@ Fake People Maker
 </div>
 
 <?php
-	if (isset($data))
+	if (array_key_exists('submit', $data))
 	{
 		echo Pre::render($data);
 
