@@ -74,52 +74,44 @@ Fake People Maker
 		echo Pre::render($data);
 
 	    $faker = Faker::create();
-	    for ($i = 1; $i <= 4; $i++)
-	    {
-	    	echo $faker->name;
 
-		    if (array_key_exists('email', $data))
-		    {
-		    	echo $faker->email;
-		    }	
+	    $count_input = (int)$data['number'];
 
-		    if (array_key_exists('phone', $data))
-		    {
-		    	echo $faker->phoneNumber;
-		    }
+	    echo $data['number'];
 
-		    if (array_key_exists('dob', $data))
-		    {
-		    	echo $faker->date($format = 'Y-m-d', $max = '-13 years', $min = '-100 years');
-		    }	
-	    
-		    if (array_key_exists('bio', $data))
-		    {
-		    	echo $faker->sentence($nbWords = 6);
-		    } 
-	    }
-   	    
-	}
+	    if ((int)$data['number'] < 0)
+		{
+			$count = 1;
+		}
+		if ((int)$data['number'] > 99)
+		{
+			$count = 99;
+		}
+		else $count = (int)$data['number'];
+		echo 'Count is'.$count;
+	 }
 ?>
 
 		@if (array_key_exists('submit', $data))
 
 			<h2>Here are your users:</h2>
 
-			<h3> {{$faker->name}} </h3>
+			@for ($i = 0; $i < $count; $i++)
+				<h4> {{$faker->name}} </h4>
 
-			@if (array_key_exists('email', $data))
-				<p>{{$faker->email}}<br>
-			@endif
-			@if (array_key_exists('phone', $data))
-				{{$faker->phoneNumber}}<br>
-			@endif
-			@if (array_key_exists('dob', $data))
-				{{$faker->date($format = 'Y-m-d', $max = '-13 years', $min = '-100 years')}}<br>
-			@endif
-			@if (array_key_exists('bio', $data))
-				{{$faker->sentence($nbwords = 6)}}<br>
-			@endif
+				@if (array_key_exists('email', $data))
+					<p>{{$faker->email}}<br>
+				@endif
+				@if (array_key_exists('phone', $data))
+					{{$faker->phoneNumber}}<br>
+				@endif
+				@if (array_key_exists('dob', $data))
+					{{$faker->date($format = 'Y-m-d', $max = '-13 years', $min = '-100 years')}}<br>
+				@endif
+				@if (array_key_exists('bio', $data))
+					{{$faker->sentence($nbwords = 6)}}<br>
+				@endif
+			@endfor
 
 	   	@endif
 

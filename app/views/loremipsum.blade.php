@@ -1,5 +1,9 @@
 @extends('master')
 
+@section ('title')
+Fake Text Maker
+@stop
+
 @section ('content')
 
 <!--PHP Logic Section-->
@@ -58,7 +62,7 @@
 
 		@if (isset($data))
 			<h2>Here is your text:</h2>
-		   	{{implode('<p>', $paragraphs);}} 
+		   	<p>{{implode('<p>', $paragraphs);}}</p>
 	   	@endif
 
 </div>
