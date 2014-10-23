@@ -101,4 +101,26 @@ Fake People Maker
    	    
 	}
 ?>
+
+		@if (array_key_exists('submit', $data))
+
+			<h2>Here are your users:</h2>
+
+			<h3> {{$faker->name}} </h3>
+
+			@if (array_key_exists('email', $data))
+				<p>{{$faker->email}}<br>
+			@endif
+			@if (array_key_exists('phone', $data))
+				{{$faker->phoneNumber}}<br>
+			@endif
+			@if (array_key_exists('dob', $data))
+				{{$faker->date($format = 'Y-m-d', $max = '-13 years', $min = '-100 years')}}<br>
+			@endif
+			@if (array_key_exists('bio', $data))
+				{{$faker->sentence($nbwords = 6)}}<br>
+			@endif
+
+	   	@endif
+
 @stop
