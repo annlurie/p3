@@ -29,7 +29,7 @@ Fake People Maker
 
 		<!-- Multiple Checkboxes -->
 		<div class="control-group">
-		  <label class="control-label" for="attributes">Give Those Fakers Fake Qualities</label>
+		  <label class="control-label" for="email">Give Those Fakers Fake Qualities</label>
 		  <div class="controls">
 		    <label class="checkbox" for="email">
 		      <input name="email" id="email" value="Email Address" type="checkbox">
@@ -113,6 +113,7 @@ Fake People Maker
        </div>
 
       <hr>
-    </div> <!-- /container -->
+    </div> 
+	</div><!-- /container -->
 
 @stop
