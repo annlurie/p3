@@ -2,6 +2,7 @@
 Bootstrap for styling and layout: http://getbootstrap.com/
 Form Builder for Bootstrap: http://bootsnipp.com/forms
 Bootstrap Template for Landing Page: http://getbootstrap.com/examples/jumbotron/
+Bootstrap Template for Nav Bar: http://bootstrapzero.com/bootstrap-template/basic
 
 ## Laravel PHP Framework
 

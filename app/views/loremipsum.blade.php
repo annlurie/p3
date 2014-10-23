@@ -50,7 +50,7 @@
 			$count = 99;
 		}
 		else $count = 1;
-		
+
 		echo 'Here is your text';
 	    $generator = new LoremIpsum();
 	    $paragraphs = $generator->getParagraphs($count);
