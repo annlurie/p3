@@ -6,7 +6,6 @@
 
 @section ('content')
 
-<body>
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
@@ -29,6 +28,8 @@
           <p><a class="btn btn-default" href="/lipsum" role="button">Let's Get Fakin'! &raquo;</a></p>
        </div>
       <hr>
-    </div> <!-- /container -->
+    </div> 
+  </div>
+  <!-- /container -->
 
 @stop
