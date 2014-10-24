@@ -78,8 +78,8 @@ Fake People Maker
 	if (array_key_exists('submit', $data))
 	{
 	    $faker = Faker::create();
-	    echo Pre::render($data);
-	    echo $data['number'];
+	    //echo Pre::render($data);
+	    //echo $data['number'];
 
 		if (!is_numeric($data['number']))
 		{
