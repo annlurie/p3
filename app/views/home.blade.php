@@ -6,7 +6,7 @@
 
 @section ('content')
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <!-- Main jumbotron for headline content/description -->
     <div class="jumbotron">
       <div class="container">
         <h1>Developer's Best Friend</h1>
@@ -16,15 +16,17 @@
       </div>
     </div>
 
+    <!-- Two panels describing individual tools -->
     <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
+    <div class="row">
+        <!--Users panel-->
         <div class="col-md-4">
           <h2>Fake Some Users</h2>
           <p>Click the button below to create up to 99 fake users. You'll get a list of names, as well as other 
             qualities (like email addresses) if you like. </p>
           <p><a class="btn btn-default" href="/users" role="button">Let's Get Fakin'! &raquo;</a></p>
         </div>
+        <!--Lorem Ipsum panel-->
         <div class="col-md-4">
           <h2>Fake Some Text</h2>
           <p>Click the button below to crate up to 99 paragraphs of fake text. It'll be in the form of pseudo-Latin
@@ -32,8 +34,8 @@
             how clients can be.</p>
           <p><a class="btn btn-default" href="/lipsum" role="button">Let's Get Fakin'! &raquo;</a></p>
        </div>
-    </div> 
-  </div>
-  <!-- /container -->
+    </div> <!--Closing row-->
+    </div> <!--Closing container-->
+  <!-- /panels -->
 
 @stop

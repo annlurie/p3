@@ -10,7 +10,7 @@ This project is a PHP application built in Laravel that provides two 'developer 
 I plan to demo this project in person during a section meeting.
 
 **Details for TA/Instructor:**
-NA for this project
+I tried fairly late in the game to get more comfortable with Blade syntax, and will continue to play around with converting the existing HTML forms, but am submitting with HTML. Please take a look at the commented-out sections of each form page to see how successful (or not) I've been in making that transition.
 
 **External Resources: Packages**
 Faker Package for Fake People: [https://packagist.org/packages/fzaninotto/faker](https://packagist.org/packages/fzaninotto/faker)

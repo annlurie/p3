@@ -11,11 +11,6 @@
 |
 */
 
-//Route::get('/', function()
-//{
-//	return View::make('hello');
-//});
-
 Route::get('/', function()
 {
 	return View::make('home');
@@ -33,13 +28,8 @@ Route::get('/users/{query?}', function()
 	return View::make('users')->with('data', $data);
 });
 
-Route::get('/pass', function()
-{
-    $data = Input::all();
-    return View::make('pass')->with($data);
-
-});
-
+//For testing packages
+/*
 Route::get('/pack', function()
 {
 	echo 'Pre!';
@@ -58,6 +48,5 @@ Route::get('/pack', function()
     $generator = new LoremIpsum();
     $paragraphs = $generator->getParagraphs(3);
    	echo Pre::render($paragraphs);
-
-
 });
+*/

@@ -47,41 +47,38 @@ Fake Text Maker
     <!--Right column, for output. Does not display if form has not been submitted.-->
     <div class="col-md-8">
     	<!--Logic for the page...which I know is a terrible place to put it...-->
-
-
 		<?php
 			//Has form been submitted? If so, do some validation of input.
 			if (isset($data))
 			{
 				//echo Pre::render($data);
-
-				//Upper and lower bounds for 
-				if (!is_numeric($data))
+				//If non-numeric string or negative number entered, output 1 paragraph.
+				if (!is_numeric($data) || (int)$data < 0)
 				{
 					$count = 1;
 				}
-				else if ((int)$data < 0)
-				{
-					$count = 1;
-				}
+				//If more than 99 paras requested, output 1 paragraph.
 				else if ((int)$data > 99)
 				{
 					$count = 99;
 				}
+				//If value between 1 & 99 entered, use value as count for generating output.
 				else $count = (int)$data;
 
+				//LoremIpsum object for generating text.
 				$generator = new LoremIpsum();
+				//Generate text with requested # of paras.
 			    $paragraphs = $generator->getParagraphs($count);
 			}
 		?>
-
+		<!--Output in right column, only if data has been passed to the view-->
 		@if (isset($data))
 			<h2>Here is your text:</h2>
 		   	<p>{{implode('<p>', $paragraphs);}}</p>
 	   	@endif
 	   	</div>
 
-</div>
-</div>
+</div><!--Closing right column-->
+</div><!--Closing container-->
 
 @stop
