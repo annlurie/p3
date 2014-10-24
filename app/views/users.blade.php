@@ -9,7 +9,8 @@ Fake People Maker
     <div class="jumbotron">
       <div class="container">
         <h1>Fake People Maker</h1>
-        <p>Here's the text that describes how to fake a person.</p>
+        <p>Let's get to fakin'! Enter the number of fake users you'd like to create, and use the 
+        	checkboxes to give them some additional attributes.</p>
       </div>
     </div>
 
@@ -84,11 +85,11 @@ Fake People Maker
 		{
 			$count = 5;
 		}
-	    elseif ($data['number'] < 0)
+	    else if ($data['number'] < 0)
 		{
 			$count = 1;
 		}
-		elseif ((int)$data['number'] > 99)
+		else if ((int)$data['number'] > 99)
 		{
 			$count = 99;
 		}

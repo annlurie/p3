@@ -10,7 +10,7 @@ Fake Text Maker
     <div class="jumbotron">
       <div class="container">
         <h1>Fake Text Maker</h1>
-        <p>Here's the text that describes how to fake some text.</p>
+        <p>Let's get to fakin'! Enter the number of paragraphs of fake text you'd like to create.</p>
       </div>
     </div>
 <!--End Header-->
