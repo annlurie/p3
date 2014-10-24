@@ -59,32 +59,40 @@ Fake People Maker
 			</div>
 
 </fieldset>
-</form>        
+</form>
+
+
+<!--HERE IS MY SECOND FORM THAT I'M USING TO TRY OUT BLADE SYNTAX
+{{ Form::open(array('url' => '/users', 'method' => 'get')) }}
+{{ Form::label('number', 'How Many Fake People?'); }}
+{{ Form::text('number', '0-99'); }}
+{{ Form::number('name', '44'); }}
+{{ Form::close() }}
+-->
 </div>
 
 
-        <div class="col-md-8">
+<div class="col-md-8">
 <?php
 	if (array_key_exists('submit', $data))
 	{
-		//echo Pre::render($data);
-
 	    $faker = Faker::create();
+	    echo Pre::render($data);
+	    echo $data['number'];
 
-	    $count_input = (int)$data['number'];
-
-	    //echo $data['number'];
-
-	    if ((int)$data['number'] < 0)
+		if (!is_numeric($data['number']))
+		{
+			$count = 5;
+		}
+	    elseif ($data['number'] < 0)
 		{
 			$count = 1;
 		}
-		if ((int)$data['number'] > 99)
+		elseif ((int)$data['number'] > 99)
 		{
 			$count = 99;
 		}
 		else $count = (int)$data['number'];
-		//echo 'Count is'.$count;
 	 }
 ?>
 
@@ -112,8 +120,7 @@ Fake People Maker
 	   	@endif
        </div>
 
-      <hr>
-    </div> 
-	</div><!-- /container -->
+</div> 
+</div><!-- /container -->
 
 @stop

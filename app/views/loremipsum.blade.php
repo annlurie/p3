@@ -47,18 +47,24 @@ Fake Text Maker
     <!--Right column, for output. Does not display if form has not been submitted.-->
     <div class="col-md-8">
     	<!--Logic for the page...which I know is a terrible place to put it...-->
+
+
 		<?php
-			//Has form been submitted?
+			//Has form been submitted? If so, do some validation of input.
 			if (isset($data))
 			{
 				//echo Pre::render($data);
 
 				//Upper and lower bounds for 
-				if ((int)$data < 0)
+				if (!is_numeric($data))
 				{
 					$count = 1;
 				}
-				if ((int)$data > 99)
+				else if ((int)$data < 0)
+				{
+					$count = 1;
+				}
+				else if ((int)$data > 99)
 				{
 					$count = 99;
 				}
@@ -75,7 +81,6 @@ Fake Text Maker
 	   	@endif
 	   	</div>
 
-  <hr>
 </div>
 </div>
 
